@@ -1,0 +1,282 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Rejestracja {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 182, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.Rejestracja h1 {
+  margin-bottom: 50px;
+}
+
+.Rejestracja button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Rejestracja button:hover {
+  background-color: darkblue;
+}
+
+.Rejestracja label {
+  margin-bottom: 10px;
+}
+
+.gallery-item img {
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.stronaGlowna {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 182, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.stronaGlowna h1 {
+  margin-bottom: 50px;
+}
+
+.stronaGlowna button {
+  margin-top: 10px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stronaGlowna button:hover {
+  background-color: darkblue;
+}
+
+.login {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 182, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.login h1 {
+  margin-bottom: 20px;
+}
+
+.login label {
+  margin-bottom: 8px;
+}
+
+.login input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.login button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: darkblue;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.gallery-item {
+  flex: 0 0 calc(33.33% - 10px);
+  height: 400px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #007bff; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 2px solid #ccc;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 20px;
+}
+
+.gallery-item h1 {
+  color: white;
+}
+
+.gallery-item button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-item button:hover {
+  background-color: darkblue;
+}
+
+.info {
+  width: 400px;
+  height: 600px;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 182, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.info h1 {
+  margin-bottom: 20px;
+}
+
+.info label {
+  margin-bottom: 8px;
+}
+
+.info button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info li {
+  margin-bottom: 10px;
+}
+
+.info p {
+  margin-bottom: 3px;
+}
+
+.info button:hover {
+  background-color: darkblue;
+}
+
+.rezerwa {
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 182, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.rezerwa h1 {
+  margin-bottom: 15px;
+}
+
+.rezerwa form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rezerwa label {
+  margin-bottom: 8px;
+}
+
+.rezerwa input {
+  margin-bottom: 10px;
+}
+
+.rezerwa button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rezerwa button:hover {
+  background-color: darkblue;
+}
