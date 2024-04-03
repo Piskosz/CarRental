@@ -1,8 +1,8 @@
 package Carrepository.Carrepository.Repository;
 
 
-import Carrepository.Carrepository.Model.LoginHaslo;
-import Carrepository.Carrepository.Model.Rejestracja;
+import Carrepository.Carrepository.Model.LoginPassword;
+import Carrepository.Carrepository.Model.Rejestration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -15,30 +15,30 @@ public class RejestracjaRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public List<Rejestracja> getAll_3(){
+    public List<Rejestration> getAll_3(){
 
-        return jdbcTemplate.query("SELECT * FROM Rejestracja;", BeanPropertyRowMapper.newInstance(Rejestracja.class));
+        return jdbcTemplate.query("SELECT * FROM Rejestracja;", BeanPropertyRowMapper.newInstance(Rejestration.class));
     }
-    public List<LoginHaslo> getAll_4() {
+    public List<LoginPassword> getAll_4() {
         return jdbcTemplate.query("SELECT login, haslo FROM Rejestracja;", (rs, rowNum) -> {
-            LoginHaslo loginHaslo = new LoginHaslo();
-            loginHaslo.setLogin(rs.getString("login"));
-            loginHaslo.setHaslo(rs.getString("haslo"));
-            return loginHaslo;
+            LoginPassword loginPassword = new LoginPassword();
+            loginPassword.setLogin(rs.getString("login"));
+            loginPassword.setHaslo(rs.getString("haslo"));
+            return loginPassword;
         });
     }
 
-    public Rejestracja getById_3(int id ){
+    public Rejestration getById_3(int id ){
 
-        return jdbcTemplate.queryForObject("SELECT * from Rejestracja WHERE " + "id = ?",BeanPropertyRowMapper.newInstance(Rejestracja.class),id);
+        return jdbcTemplate.queryForObject("SELECT * from Rejestracja WHERE " + "id = ?",BeanPropertyRowMapper.newInstance(Rejestration.class),id);
 
     }
 
 
-    public int save2(List<Rejestracja> rejestracjas) {
-        rejestracjas.forEach(rejestracja ->  jdbcTemplate
+    public int save2(List<Rejestration> rejestrations) {
+        rejestrations.forEach(rejestration ->  jdbcTemplate
                 .update("INSERT INTO Rejestracja(login,haslo,mail) VALUES(?,?,?)",
-                        rejestracja.getLogin(),rejestracja.getHaslo(),rejestracja.getMail()
+                        rejestration.getLogin(), rejestration.getHaslo(), rejestration.getMail()
 
                 ));
 
@@ -46,15 +46,15 @@ public class RejestracjaRepository {
         return 1;
     }
 
-    public Rejestracja getByLogin(String login) {
+    public Rejestration getByLogin(String login) {
         try {
             return jdbcTemplate.queryForObject(
                     "SELECT * FROM Rejestracja WHERE login = ?",
-                    BeanPropertyRowMapper.newInstance(Rejestracja.class),
+                    BeanPropertyRowMapper.newInstance(Rejestration.class),
                     login
             );
         } catch (org.springframework.dao.EmptyResultDataAccessException e) {
-            return null; // Jeśli nie ma użytkownika o podanym loginie
+            return null;
         }
     }
 

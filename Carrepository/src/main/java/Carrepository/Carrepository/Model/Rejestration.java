@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Rejestracja {
+public class Rejestration {
 
     private int id;
     private String Login;

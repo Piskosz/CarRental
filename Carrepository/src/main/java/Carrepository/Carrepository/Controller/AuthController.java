@@ -1,7 +1,7 @@
 package Carrepository.Carrepository.Controller;
 
-import Carrepository.Carrepository.Model.LoginHaslo;
-import Carrepository.Carrepository.Model.Rejestracja;
+import Carrepository.Carrepository.Model.LoginPassword;
+import Carrepository.Carrepository.Model.Rejestration;
 import Carrepository.Carrepository.Repository.RejestracjaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,11 +18,11 @@ public class AuthController {
     private RejestracjaRepository rejestracjaRepository;
 
     @PostMapping("/testowy")
-    public ResponseEntity<String> login(@RequestBody LoginHaslo loginRequest) {
+    public ResponseEntity<String> login(@RequestBody LoginPassword loginRequest) {
         String login = loginRequest.getLogin();
         String haslo = loginRequest.getHaslo();
 
-        Rejestracja user = rejestracjaRepository.getByLogin(login);
+        Rejestration user = rejestracjaRepository.getByLogin(login);
 
         if (user != null && user.getHaslo().equals(haslo)) {
             String token = generateJwtToken(login);

@@ -1,6 +1,6 @@
 package Carrepository.Carrepository.Model;
 
-public class LoginHaslo {
+public class LoginPassword {
     private String login;
     private String haslo;
 
